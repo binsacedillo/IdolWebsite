@@ -224,9 +224,9 @@ const HeaderNavigation = () => {
     <HeaderContainer expanded={showAdditionalTexts}>
       <NavLinks>
         <NavLink href="/">Home</NavLink>
-        <NavLink href="/about">About Aquors</NavLink>
-        <NavLink href="/members">Members</NavLink>
-        <NavLink href="/music">Music</NavLink>
+        <NavLink href="About">About Aquors</NavLink>
+        <NavLink href="Members">Members</NavLink>
+        <NavLink href="Music">Music</NavLink>
       </NavLinks>
       <TextContainer>
         <span>Welcome to</span>
