@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { NavLink as RouterNavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import backgroundImage from '../images/headerimage.png';
 import headerImage from '../images/aquorsgroup.jpg';
@@ -68,7 +69,7 @@ const NavLinks = () => {
     }
   `;
 
-  const NavLink = styled.a`
+  const CustomNavLink = styled(RouterNavLink)`
     text-decoration: none;
     color: #333;
     font-size: 1rem;
@@ -271,10 +272,18 @@ const NavLinks = () => {
   return (
     <NavLinksContainer>
       <NavLinksInnerContainer>
-        <NavLink href="/">Home</NavLink>
-        <NavLink href="/about">About Aquors</NavLink>
-        <NavLink href="/members">Members</NavLink>
-        <NavLink href="/music">Music</NavLink>
+        <CustomNavLink to="/" >
+          Home
+        </CustomNavLink>
+        <CustomNavLink to="/About">
+          About Aquors
+        </CustomNavLink>
+        <CustomNavLink to="/Members">
+          Members
+        </CustomNavLink>
+        <CustomNavLink to="/Music">
+          Music
+        </CustomNavLink>
       </NavLinksInnerContainer>
       {/* Image container */}
       <ImageContainer>

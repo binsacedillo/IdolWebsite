@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink as RouterNavLink } from 'react-router-dom';
 import backgroundImage from '../images/headerimage.png'; // Replace this with the path to your background image
 
 const NavMusic = () => {
@@ -43,7 +44,7 @@ const NavMusic = () => {
     }
   `;
 
-  const NavLink = styled.a`
+  const CustomNavLink = styled(RouterNavLink)`
     text-decoration: none;
     color: black;
     font-size: 1rem;
@@ -75,10 +76,18 @@ const NavMusic = () => {
 return (
     <NavLinksContainer>
       <NavLinksInnerContainer>
-        <NavLink href="/">Home</NavLink>
-        <NavLink href="/about">About Aquors</NavLink>
-        <NavLink href="/members">Members</NavLink>
-        <NavLink href="/music">Music</NavLink>
+        <CustomNavLink to="/" >
+          Home
+        </CustomNavLink>
+        <CustomNavLink to="/About">
+          About Aquors
+        </CustomNavLink>
+        <CustomNavLink to="/Members">
+          Members
+        </CustomNavLink>
+        <CustomNavLink to="/Music">
+          Music
+        </CustomNavLink>
       </NavLinksInnerContainer>
     </NavLinksContainer>
   );

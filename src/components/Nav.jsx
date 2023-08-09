@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink as RouterNavLink } from 'react-router-dom';
 import backgroundImage from '../images/headerimage.png';
 
 const Nav = () => {
@@ -53,7 +54,7 @@ const Nav = () => {
   }
   `;
 
-  const NavLink = styled.a`
+  const CustomNavLink = styled(RouterNavLink)`
     text-decoration: none;
     color: #333;
     font-size: 1rem;
@@ -96,10 +97,18 @@ const Nav = () => {
   return (
     <NavLinksContainer>
       <NavLinksInnerContainer>
-        <NavLink href="/">Home</NavLink>
-        <NavLink href="/about">About Aquors</NavLink>
-        <NavLink href="/members">Members</NavLink>
-        <NavLink href="/music">Music</NavLink>
+        <CustomNavLink to="/" >
+          Home
+        </CustomNavLink>
+        <CustomNavLink to="/About">
+          About Aquors
+        </CustomNavLink>
+        <CustomNavLink to="/Members">
+          Members
+        </CustomNavLink>
+        <CustomNavLink to="/Music">
+          Music
+        </CustomNavLink>
       </NavLinksInnerContainer>
     </NavLinksContainer>
   );

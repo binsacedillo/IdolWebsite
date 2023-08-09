@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { NavLink as RouterNavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import backgroundImage from '../images/headerimage.png';
 import image2 from '../images/aquors.png';
@@ -63,7 +64,7 @@ const NavLinks = styled.div`
   }
 `;
 
-const NavLink = styled.a`
+const CustomNavLink = styled(RouterNavLink)`
   text-decoration: none;
   color: #333;
   font-size: 1rem;
@@ -223,10 +224,18 @@ const HeaderNavigation = () => {
   return (
     <HeaderContainer expanded={showAdditionalTexts}>
       <NavLinks>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="About">About Aquors</NavLink>
-        <NavLink to="Members">Members</NavLink>
-        <NavLink to="Music">Music</NavLink>
+        <CustomNavLink to="/" >
+          Home
+        </CustomNavLink>
+        <CustomNavLink to="/About">
+          About Aquors
+        </CustomNavLink>
+        <CustomNavLink to="/Members">
+          Members
+        </CustomNavLink>
+        <CustomNavLink to="/Music">
+          Music
+        </CustomNavLink>
       </NavLinks>
       <TextContainer>
         <span>Welcome to</span>
