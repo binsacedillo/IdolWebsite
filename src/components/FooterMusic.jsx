@@ -26,7 +26,7 @@ const FooterMusic = () => {
 }
 
 @media screen and (min-width: 1025px) {
-  top: 215%;
+  top: 235%;
 }
 
   @media screen and (min-width: 1441px) {
@@ -53,7 +53,7 @@ const FooterMusic = () => {
 }
 
 @media screen and (min-width: 1025px) {
-    top: 213%;
+    top: 233%;
 }
 
   @media screen and (min-width: 1441px) {
@@ -81,7 +81,7 @@ const FooterMusic = () => {
 }
 
 @media screen and (min-width: 1025px) {
-   top: 213%;
+   top: 233%;
 }
 
   @media screen and (min-width: 1441px) {

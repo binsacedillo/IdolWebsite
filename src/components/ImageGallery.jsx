@@ -90,6 +90,11 @@ const ModalContainer = styled.div`
   align-items: center;
   z-index: 999;
   border-radius: 10px;
+
+  @media screen and (max-width: 500px) {
+  height: 80%;
+  top: 120px;
+}
 `;
 
 const ModalImage = styled.img`

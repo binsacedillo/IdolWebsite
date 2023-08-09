@@ -28,20 +28,12 @@ const HeroSection = styled.section`
 }
 
 @media screen and (min-width: 1025px) {
+  font-size: 1rem;
+    top: 55%;
+    left: 50%;
+    width: 90%;
+    height: 70%;
   /* CSS styles for larger screens */
-  top: 55%;
-  left: 50%;
-  width: 90%;
-  height: 70%;
-}
-
-
-@media screen and (orientation: landscape) {
- top: 100%;
-  left: 50%;
-  width: 90%;
-  height: 100%;
-  /* Styles for landscape orientation */
 }
 
   @media screen and (min-width: 1441px) {
@@ -82,13 +74,9 @@ const SecondaryText = styled.div`
 
 @media screen and (min-width: 1025px) {
   /* CSS styles for larger screens */
+  font-size: 1rem;
   top: 90%;
-  left: 30%;
-}
-
-@media screen and (orientation: landscape) {
-   top: 90%;
-  left: 30%;
+  left: 25%;
 }
 
   @media screen and (min-width: 1441px) {
@@ -131,8 +119,8 @@ const NewText = styled.div`
 }
 
 @media screen and (min-width: 1025px) {
-  top: 86.4%;
-  left: 14%;
+  top: 86.2%;
+  left: 12.8%;
 }
 
 @media screen and (min-width: 1441px) {
@@ -170,7 +158,7 @@ const CenteredText = styled.div`
 }
 
 @media screen and (orientation: landscape) {
-  top: 40%;
+  top: 15%;
 }
 
   @media screen and (min-width: 1441px) {

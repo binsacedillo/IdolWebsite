@@ -20,13 +20,7 @@ const NavMusic = () => {
 }
 
 @media screen and (min-width: 1025px) {
-  height: 220vh;
-}
-
-
-@media screen and (orientation: landscape) {
-  height: 400vh;
-  /* Styles for landscape orientation */
+ height: 240vh;
 }
 
 

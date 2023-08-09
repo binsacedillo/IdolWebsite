@@ -43,13 +43,8 @@ const CenteredContainer = styled.div`
 }
 
 @media screen and (min-width: 1025px) {
-   top: 160%;
+  top: 180%;
     height: 120%;
-}
-
-@media screen and (orientation: landscape) {
-   top: 400%;
-    height: 420%;
 }
 
   @media screen and (min-width: 1441px) {
@@ -107,6 +102,14 @@ const PlayButton = styled.a`
   &:hover {
     background-color: #3C3C3C;
   }
+
+  @media screen and (max-width: 500px)  {
+  margin-top: 0.5rem;
+}
+
+   @media screen and (min-width: 1025px) {
+  margin-top: 0.5rem;
+}
 `;
 
 const PlaylistHeader = styled.h1`
