@@ -3,12 +3,11 @@ import { NavLink as RouterNavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import backgroundImage from '../images/headerimage.png';
 import image2 from '../images/aquors.png';
-import image3 from '../images/llsunshine.png';
-import additionalLogo from '../images/bushiroad.png';
 
 const HeaderContainer = styled.header`
   position: relative;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -17,11 +16,12 @@ const HeaderContainer = styled.header`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Prevent the background image from scrolling on small screens */
+  background-attachment: fixed;
+  padding: 2rem 1rem;
 
   @media screen and (max-width: 500px) {
-   height: ${props => props.expanded ? 'auto' : '100vh'};
-    transition: height 0.3s ease-in-out;
+   min-height: auto;
+   padding: 1.5rem 0.5rem;
 }
 
 @media screen and (min-width: 501px) and (max-width: 1024px) {
@@ -38,14 +38,6 @@ const HeaderContainer = styled.header`
 
   @media screen and (min-width: 1441px) {
   }
-`;
-
-const BottomCenteredText = styled.div`
-  position: absolute;
-  bottom: 20px; /* Adjust this value to center the text as per your preference */
-  color: white;
-  font-size: 0.5rem;
-  font-weight: 700;
 `;
 
 const NavLinks = styled.div`
@@ -130,50 +122,6 @@ const TextContainer = styled.div`
   }
 `;
 
-const LeftLogo = styled.img`
-  position: absolute;
-  bottom: 20px;
-  left: 10px;
-  max-width: 100px;
-  max-height: 100px;
-
-  @media screen and (max-width: 500px) {
-  /* CSS styles for mobile devices */
-   max-width: 50px;
-  max-height: 100px;
-}
-
-@media screen and (min-width: 501px) and (max-width: 1024px) {
-}
-
-@media screen and (min-width: 1025px) {
-}
-
-  @media screen and (min-width: 1441px) {
-  }
-`;
-
-const RightBottomImage = styled.img`
-  position: absolute;
-  bottom: 20px;
-  right: 10px;
-  max-width: 100px;
-  max-height: 100px;
-
-  @media screen and (max-width: 500px) {
-   max-width: 50px;
-}
-
-@media screen and (min-width: 501px) and (max-width: 1024px) {
-}
-
-@media screen and (min-width: 1025px) {
-}
-
-  @media screen and (min-width: 1441px) {
-  }
-`;
-
 const AdditionalTexts = styled.div`
   display: flex;
   color: white;
@@ -242,16 +190,13 @@ const HeaderNavigation = () => {
         <img src={image2} alt="Image 2" />
         <span>Website</span>
       </TextContainer>
-      <BottomCenteredText>&#xA9; AQUORS, ALL RIGHTS RESERVED LOVE LIVE FRANCHISE 2023</BottomCenteredText>
-      <LeftLogo src={additionalLogo} alt="Additional Logo" />
-      <RightBottomImage src={image3} alt="Right bottom image" />
+      <ToggleButton onClick={handleToggleTexts}>
+        {showAdditionalTexts ? 'Hide Info' : 'Show Info'}
+      </ToggleButton>
       <AdditionalTexts style={{ display: showAdditionalTexts ? 'flex' : 'none' }}>
         <span>Aquors is a nine-member Japanese school idol group from Uranohoshi Girls High School in Numazu, Shizuoka Prefecture. The group was formed in 2015 by Chika Takami, Riko Sakurauchi, and You Watanabe. The other members are Hanamaru Kunikida, Kanan Matsuura, Dia Kurosawa, Ruby Kurosawa, Mari Ohara, and Yoshiko Tsushima.</span>
         <span>&ldquo;アクアは、静岡県沼津市の浦の星女子高等学校から来る9人組の日本のスクールアイドルグループです。このグループは2015年に高海千歌、桜内梨子、渡辺曜によって結成されました。他のメンバーは国木田花丸、松浦果南、黒澤ダイヤ、黒澤ルビィ、小原鞠莉、津島善子です。&rdquo;</span>
       </AdditionalTexts>
-      <ToggleButton onClick={handleToggleTexts}>
-        {showAdditionalTexts ? 'Hide Info' : 'Show Info'}
-      </ToggleButton>
     </HeaderContainer>
   );
 };

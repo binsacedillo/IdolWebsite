@@ -28,23 +28,27 @@ const NavLinks = () => {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 2rem 1rem;
 
      /* For screens with a maximum width of 500px */
     @media screen and (max-width: 500px) {
-    height: 130vh;
+    min-height: auto;
+      padding: 1.5rem 0.5rem;
       /* Your styles for small screens (up to 500px) here */
     }
 
     /* For screens with a minimum width of 501px and a maximum width of 1024px */
     @media screen and (min-width: 501px) and (max-width: 1024px) {
-       height: 100vh;
+       min-height: 100vh;
+      padding: 2rem 1rem;
       /* Your styles for medium screens (501px to 1024px) here */
     }
 
     /* For screens with a minimum width of 1025px */
     @media screen and (min-width: 1025px) {
-       height: 100vh;
+       min-height: 100vh;
+      padding: 2rem 2rem;
       /* Your styles for large screens (1025px and above) here */
     }
 

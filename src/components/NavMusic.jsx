@@ -7,26 +7,31 @@ const NavMusic = () => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 200vh;
+    min-height: 100vh;
     background-image: url(${backgroundImage}); /* Set the background image here */
     background-size: cover; /* Adjust the background size */
     background-position: center;
+    padding: 2rem 1rem;
 
 @media screen and (max-width: 500px) {
-  height: 279vh;
+  min-height: auto;
+  padding: 1.5rem 0.5rem;
 }
 
 @media screen and (min-width: 501px) and (max-width: 1024px) {
-  height: 295vh;
+  min-height: 100vh;
+  padding: 2rem 1rem;
 }
 
 @media screen and (min-width: 1025px) {
- height: 240vh;
+ min-height: 100vh;
+ padding: 2rem 2rem;
 }
 
 
   @media screen and (min-width: 1441px) {
-    height: 220vh;
+    min-height: 100vh;
+    padding: 2rem 3rem;
   }
   `;
 

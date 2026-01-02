@@ -1,34 +1,34 @@
 import styled from 'styled-components';
 import { NavLink as RouterNavLink } from 'react-router-dom';
-import backgroundImage from '../images/headerimage.png';
 
 const Nav = () => {
   const NavLinksContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(${backgroundImage});
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 410vh;
+    min-height: 150px;
+    padding: 20px;
+    width: 100%;
     
-   @media screen and (max-width: 500px) {
-  /* CSS styles for mobile devices */
-  height: 530vh;
-}
+    @media screen and (max-width: 500px) {
+      min-height: 120px;
+      padding: 15px;
+    }
 
-@media screen and (min-width: 501px) and (max-width: 1024px) {
-  height: 450vh;
-}
+    @media screen and (min-width: 501px) and (max-width: 1024px) {
+      min-height: 140px;
+      padding: 20px;
+    }
 
-@media screen and (min-width: 1025px) {
-  height: 410vh;
-}
+    @media screen and (min-width: 1025px) {
+      min-height: 150px;
+      padding: 20px;
+    }
 
-  @media screen and (min-width: 1441px) {
-    height: 430vh;
-  }
+    @media screen and (min-width: 1441px) {
+      min-height: 160px;
+      padding: 25px;
+    }
   `;
 
   const NavLinksInnerContainer = styled.div`
