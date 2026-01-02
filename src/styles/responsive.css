@@ -1,0 +1,219 @@
+/* Responsive Utility Classes */
+
+/* Container sizing with max-widths */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 var(--spacing-xl);
+  }
+}
+
+/* Responsive Grid */
+.grid {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    gap: var(--spacing-lg);
+  }
+}
+
+.grid-cols-1 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Responsive Flexbox */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* Responsive Padding */
+.p-sm {
+  padding: var(--spacing-sm);
+}
+
+.p-md {
+  padding: var(--spacing-md);
+}
+
+.p-lg {
+  padding: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .p-md\@tablet {
+    padding: var(--spacing-md);
+  }
+
+  .p-lg\@tablet {
+    padding: var(--spacing-lg);
+  }
+}
+
+/* Responsive Margin */
+.m-auto {
+  margin: auto;
+}
+
+.mb-md {
+  margin-bottom: var(--spacing-md);
+}
+
+.mb-lg {
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Responsive Text */
+.text-center {
+  text-align: center;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-base {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.25rem;
+}
+
+.text-2xl {
+  font-size: 1.875rem;
+}
+
+.text-3xl {
+  font-size: 2.25rem;
+}
+
+@media (min-width: 768px) {
+  .text-lg\@tablet {
+    font-size: 1.5rem;
+  }
+
+  .text-2xl\@tablet {
+    font-size: 2rem;
+  }
+
+  .text-3xl\@tablet {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-2xl\@desktop {
+    font-size: 2.25rem;
+  }
+
+  .text-3xl\@desktop {
+    font-size: 3rem;
+  }
+
+  .text-4xl\@desktop {
+    font-size: 3.75rem;
+  }
+}
+
+/* Visibility */
+.hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hidden\@tablet {
+    display: none;
+  }
+
+  .block\@tablet {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hidden\@desktop {
+    display: none;
+  }
+
+  .block\@desktop {
+    display: block;
+  }
+}
+
+/* Aspect Ratio */
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-square {
+  aspect-ratio: 1;
+}
+
+/* Image Optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Section Spacing */
+section {
+  padding: var(--spacing-2xl) 0;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: var(--spacing-3xl) 0;
+  }
+}
