@@ -4,96 +4,126 @@ import additionalLogo from '../images/bushiroad.png';
 
 const MembersFooter = () => {
 
+  const FooterContainer = styled.footer`
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1rem;
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    @media screen and (max-width: 500px) {
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1.5rem 0.5rem;
+    }
+
+    @media screen and (min-width: 501px) and (max-width: 1024px) {
+      padding: 2rem 1rem;
+    }
+
+    @media screen and (min-width: 1025px) {
+      padding: 2rem 2rem;
+    }
+
+    @media screen and (min-width: 1441px) {
+      padding: 2rem 3rem;
+    }
+  `;
+
   const BottomCenteredText = styled.div`
-    position: absolute;
-    top: 295%; /* Adjust this value to center the text as per your preference */
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    flex: 1;
     color: white;
     text-align: center;
-    font-size: 8px;
+    font-size: 0.75rem;
     font-weight: 700;
-    white-space: nowrap; 
+    white-space: normal;
+    line-height: 1.5;
 
-    /* Small screens */
     @media screen and (max-width: 500px) {
-  /* CSS styles for mobile devices */
-  top: 600%;
-}
+      width: 100%;
+      order: 3;
+      font-size: 0.65rem;
+    }
 
-@media screen and (min-width: 501px) and (max-width: 1024px) {
-   top: 497%;
-}
+    @media screen and (min-width: 501px) and (max-width: 1024px) {
+      font-size: 0.75rem;
+    }
 
-@media screen and (min-width: 1025px) {
-  top: 405%;
-}
+    @media screen and (min-width: 1025px) {
+      font-size: 0.8rem;
+    }
 
-  @media screen and (min-width: 1441px) {
-    top: 426%;
-  }
+    @media screen and (min-width: 1441px) {
+      font-size: 0.9rem;
+    }
   `;
 
   const LeftLogo = styled.img`
-    position: absolute;
-    top: 293%;
-    left: 10px;
-    max-width: 120px;
-    max-height: 120px;
+    position: relative;
+    max-width: 100px;
+    max-height: 100px;
+    height: auto;
 
-   @media screen and (max-width: 500px) {
-  /* CSS styles for mobile devices */
-    top: 600%;
-    max-width: 50px;
-}
+    @media screen and (max-width: 500px) {
+      max-width: 60px;
+      max-height: 60px;
+      order: 1;
+    }
 
-@media screen and (min-width: 501px) and (max-width: 1024px) {
-  top: 495%;
-}
+    @media screen and (min-width: 501px) and (max-width: 1024px) {
+      max-width: 80px;
+      max-height: 80px;
+    }
 
-@media screen and (min-width: 1025px) {
-  top: 404%;
-}
+    @media screen and (min-width: 1025px) {
+      max-width: 100px;
+      max-height: 100px;
+    }
 
-  @media screen and (min-width: 1441px) {
-    top: 423%;
-  }
+    @media screen and (min-width: 1441px) {
+      max-width: 120px;
+      max-height: 120px;
+    }
   `;
 
   const RightBottomImage = styled.img`
-    position: absolute;
-    top: 293%;
-    right: 10px;
-    max-width: 120px;
-    max-height: 120px;
+    position: relative;
+    max-width: 100px;
+    max-height: 100px;
+    height: auto;
 
-    /* Small screens */
-   @media screen and (max-width: 500px) {
-  /* CSS styles for mobile devices */
-   top: 600%;
-    max-width: 50px;
-}
+    @media screen and (max-width: 500px) {
+      max-width: 60px;
+      max-height: 60px;
+      order: 2;
+    }
 
-@media screen and (min-width: 501px) and (max-width: 1024px) {
-   top: 495%;
-}
+    @media screen and (min-width: 501px) and (max-width: 1024px) {
+      max-width: 80px;
+      max-height: 80px;
+    }
 
-@media screen and (min-width: 1025px) {
-  top: 404%;
-}
+    @media screen and (min-width: 1025px) {
+      max-width: 100px;
+      max-height: 100px;
+    }
 
-  @media screen and (min-width: 1441px) {
-     top: 423%;
-  }
+    @media screen and (min-width: 1441px) {
+      max-width: 120px;
+      max-height: 120px;
+    }
   `;
 
   return (
-    <>
-      <BottomCenteredText>&#xA9; AQUORS, ALL RIGHTS RESERVED.
-       LOVE LIVE FRANCHISE 2023</BottomCenteredText>
+    <FooterContainer>
       <LeftLogo src={additionalLogo} alt="Additional Logo" />
+      <BottomCenteredText>&#xA9; AQUORS, ALL RIGHTS RESERVED. LOVE LIVE FRANCHISE 2023</BottomCenteredText>
       <RightBottomImage src={image3} alt="Right bottom image" />
-    </>
+    </FooterContainer>
   );
 };
 

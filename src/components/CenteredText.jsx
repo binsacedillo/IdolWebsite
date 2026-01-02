@@ -17,36 +17,33 @@ import logopng from '../images/aquors.png';
 
 const Members = () => { 
 
-const CenteredContainer = styled.div`
-  position: absolute;
-  top: 165%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+const CenteredContainer = styled.section`
+  position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  padding: 2rem 1rem;
+  z-index: 5;
+  backdrop-filter: blur(5px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
   @media screen and (max-width: 500px) {
-  /* CSS styles for mobile devices */
-  top: 240%;
-  left: 50%;
-}
+    padding: 1.5rem 0.5rem;
+  }
 
-@media screen and (min-width: 501px) and (max-width: 1024px) {
-  top: 200%;
-  left: 50%;
-}
+  @media screen and (min-width: 501px) and (max-width: 1024px) {
+    padding: 2rem 1rem;
+  }
 
-@media screen and (min-width: 1025px) {
-  top: 170%;
-  left: 50%;
-}
+  @media screen and (min-width: 1025px) {
+    padding: 3rem 2rem;
+  }
 
   @media screen and (min-width: 1441px) {
-    top: 170%;
-  left: 50%;
+    padding: 3rem 2rem;
   }
 `;
 
@@ -105,23 +102,37 @@ const RowBox = styled.div`
   align-items: flex-start;
   margin-bottom: 10px;
   width: 100%;
+  max-width: 900px;
   position: relative;
-  background: rgba(255, 255, 255, 0.2); /* Change the opacity and color as needed */
-  backdrop-filter: blur(8px); /* Apply the blur only to the background */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
   border-radius: 8px;
- @media screen and (max-width: 500px) {
-  /* CSS styles for mobile devices */
-  width: 90%;
-}
+  box-sizing: border-box;
 
-@media screen and (min-width: 501px) and (max-width: 1024px) {
-}
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px 10px;
+    margin-left: 0;
+    margin-right: 0;
+  }
 
-@media screen and (min-width: 1025px) {
+  @media screen and (min-width: 501px) and (max-width: 1024px) {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 15px;
+  }
 
-}
+  @media screen and (min-width: 1025px) {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+  }
 
   @media screen and (min-width: 1441px) {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
   }
 `;
 
@@ -169,8 +180,33 @@ const SocialMediaIcons = styled.div`
 `;
 
 const MemberGroupContainer = styled.div`
-  width: 120%;
+  width: 100%;
+  max-width: 900px;
   margin-bottom: 40px;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+    padding: 0 10px;
+  }
+
+  @media screen and (min-width: 501px) and (max-width: 1024px) {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  @media screen and (min-width: 1025px) {
+    width: 100%;
+    max-width: 900px;
+  }
+
+  @media screen and (min-width: 1441px) {
+    width: 100%;
+    max-width: 1000px;
+  }
 `;
 
 const MemberGroupTitle = styled.h2`

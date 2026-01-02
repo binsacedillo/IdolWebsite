@@ -22,34 +22,30 @@ const imageUrls = [
   // Add more images as needed
 ];
 
-const GalleryContainer = styled.div`
-  position: absolute;
+const GalleryContainer = styled.section`
+  position: relative;
+  width: 100%;
   color: white;
-  top: 355%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  z-index: 9999;
+  padding: 3rem 1rem;
+  backdrop-filter: blur(5px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 10;
 
   @media screen and (max-width: 500px) {
-  /* CSS styles for mobile devices */
-  top: 520%;
-  left: 50%;
-}
+    padding: 2rem 0.5rem;
+  }
 
-@media screen and (min-width: 501px) and (max-width: 1024px) {
-  top: 440%;
-  left: 50%;
-}
+  @media screen and (min-width: 501px) and (max-width: 1024px) {
+    padding: 2.5rem 1rem;
+  }
 
-@media screen and (min-width: 1025px) {
-  top: 360%;
-  left: 50%;
-}
+  @media screen and (min-width: 1025px) {
+    padding: 3rem 2rem;
+  }
 
-   @media screen and (min-width: 1441px) {
-    top: 365%;
-  left: 50%;
+  @media screen and (min-width: 1441px) {
+    padding: 3rem 3rem;
   }
 `;
 
