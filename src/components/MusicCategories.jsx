@@ -6,16 +6,14 @@ import pic2 from '../images/albumcovers/song2.jpg';
 import pic3 from '../images/albumcovers/song3.jpg';
 
 const CenteredContainer = styled.div`
-  position: absolute;
+  position: relative;
   color: white;
-  top: 150%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
   width: 100%;
+  padding: 3rem 1rem;
+  z-index: 5;
 
   /* Glass effect background */
   &::before {
@@ -31,25 +29,19 @@ const CenteredContainer = styled.div`
   }
 
   @media screen and (max-width: 500px) {
-    top: 220%;
-    height: 180%;
-    padding-bottom: 140px;
+    padding: 2rem 0.5rem;
   }
 
 @media screen and (min-width: 501px) and (max-width: 1024px) {
-  top: 220%;
-    height: 180%;
-    padding-bottom: 320px;
+  padding: 2.5rem 1rem;
 }
 
 @media screen and (min-width: 1025px) {
-  top: 180%;
-    height: 120%;
+  padding: 3rem 2rem;
 }
 
   @media screen and (min-width: 1441px) {
-    top: 160%;
-    height: 120%;
+    padding: 3rem 3rem;
   }
 `;
 
